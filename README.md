@@ -39,52 +39,55 @@ Actualización de registros.
 Validaciones de datos.
 
 Diagrama visual de estructura del proyecto.
-┌──────────────────────────────────────────────────────────┐
-│                    ProductManagement.API                 │
-│        (Capa de Presentación / Endpoints públicos)       │
-│                                                          │
-│  - Controladores (ProductsController, etc.)              │
-│  - Configuración de servicios y middlewares              │
-│  - Swagger / Inyección de dependencias                   │
-│                                                          │
-│  ▶ Consume lógica desde Application                      │
-└──────────────────────────────────────────────────────────┘
-                           │
-                           ▼
-┌──────────────────────────────────────────────────────────┐
-│               ProductManagement.Application              │
-│        (Capa de Lógica de Negocio / Reglas)              │
-│                                                          │
-│  - DTOs (Data Transfer Objects)                          │
-│  - Interfaces (IProductRepository, servicios)            │
-│  - Validaciones / AutoMapper / Casos de uso              │
-│                                                          │
-│  ▶ Define contratos que implementa Infrastructure         │
-└──────────────────────────────────────────────────────────┘
-                           │
-                           ▼
-┌──────────────────────────────────────────────────────────┐
-│               ProductManagement.Infrastructure           │
-│         (Capa de Persistencia / Acceso a Datos)          │
-│                                                          │
-│  - DbContext (ProductDbContext)                          │
-│  - Implementaciones de repositorios                      │
-│  - Configuración de EF Core y migraciones                │
-│                                                          │
-│  ▶ Usa entidades de Domain                               │
-└──────────────────────────────────────────────────────────┘
-                           │
-                           ▼
-┌──────────────────────────────────────────────────────────┐
-│                  ProductManagement.Domain                │
-│          (Capa de Entidades y Reglas de Dominio)         │
-│                                                          │
-│  - Entidades (Product, Category, etc.)                   │
-│  - Enums / Value Objects / Exceptions                    │
-│                                                          │
-│  ▶ No depende de ninguna otra capa                       │
-└──────────────────────────────────────────────────────────┘
 
+
+
+           ┌──────────────────────────────────────────────────────────┐
+           │                    ProductManagement.API                 │
+           │        (Capa de Presentación / Endpoints públicos)       │
+           │                                                          │
+           │  - Controladores (ProductsController, etc.)              │
+           │  - Configuración de servicios y middlewares              │
+           │  - Swagger / Inyección de dependencias                   │
+           │                                                          │
+           │  ▶ Consume lógica desde Application                      │
+           └──────────────────────────────────────────────────────────┘
+                           │
+                           ▼
+            ┌──────────────────────────────────────────────────────────┐
+            │               ProductManagement.Application              │
+            │        (Capa de Lógica de Negocio / Reglas)              │
+            │                                                          │
+            │  - DTOs (Data Transfer Objects)                          │
+            │  - Interfaces (IProductRepository, servicios)            │
+            │  - Validaciones / AutoMapper / Casos de uso              │
+            │                                                          │
+            │  ▶ Define contratos que implementa Infrastructure        │
+            └──────────────────────────────────────────────────────────┘
+                           │
+                           ▼
+            ┌──────────────────────────────────────────────────────────┐
+            │               ProductManagement.Infrastructure           │
+            │         (Capa de Persistencia / Acceso a Datos)          │
+            │                                                          │
+            │  - DbContext (ProductDbContext)                          │
+            │  - Implementaciones de repositorios                      │
+            │  - Configuración de EF Core y migraciones                │
+            │                                                          │
+            │  ▶ Usa entidades de Domain                               │
+            └──────────────────────────────────────────────────────────┘
+                           │
+                           ▼
+            ┌──────────────────────────────────────────────────────────┐
+            │                  ProductManagement.Domain                │
+            │          (Capa de Entidades y Reglas de Dominio)         │
+            │                                                          │
+            │  - Entidades (Product, Category, etc.)                   │
+            │  - Enums / Value Objects / Exceptions                    │
+            │                                                          │
+            │  ▶ No depende de ninguna otra capa                       │
+            └──────────────────────────────────────────────────────────┘
                  ▲──────────────────────────▲
+
                  │         Referencias       │
                  └───────────────────────────┘
