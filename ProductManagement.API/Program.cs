@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ProductManagement.Application.Interfaces;
+using ProductManagement.Application.Services;
 using ProductManagement.Infrastructure.Data;
 using ProductManagement.Infrastructure.Repositories;
 
@@ -14,9 +15,13 @@ builder.Services.AddSwaggerGen();
 // Base de datos
 builder.Services.AddDbContext<ProductDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-// inyeccion de dependencias
+// Repositorios - inyeccion de dependencias
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+
+// Servicios
+builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<CategoryService>();
 
 var app = builder.Build();
 

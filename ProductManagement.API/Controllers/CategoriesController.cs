@@ -6,11 +6,11 @@ namespace ProductManagement.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class ProductsController : ControllerBase
+    public class CategoriesController : ControllerBase
     {
-        private readonly ProductService _service;
+        private readonly CategoryService _service;
 
-        public ProductsController(ProductService service)
+        public CategoriesController(CategoryService service)
         {
             _service = service;
         }
@@ -21,22 +21,22 @@ namespace ProductManagement.API.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var product = await _service.GetByIdAsync(id);
-            return product == null ? NotFound() : Ok(product);
+            var category = await _service.GetByIdAsync(id);
+            return category == null ? NotFound() : Ok(category);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Product product)
+        public async Task<IActionResult> Create(Category category)
         {
-            var created = await _service.CreateAsync(product);
+            var created = await _service.CreateAsync(category);
             return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, Product product)
+        public async Task<IActionResult> Update(int id, Category category)
         {
-            if (id != product.Id) return BadRequest("El ID del producto no coincide.");
-            await _service.UpdateAsync(product);
+            if (id != category.Id) return BadRequest("El ID de la categoría no coincide.");
+            await _service.UpdateAsync(category);
             return NoContent();
         }
 

@@ -8,13 +8,25 @@ namespace ProductManagement.Infrastructure.Repositories
     public class ProductRepository : IProductRepository
     {
         private readonly ProductDbContext _context;
-        public ProductRepository(ProductDbContext context) => _context = context;
 
-        public async Task<IEnumerable<Product>> GetAllAsync() =>
-            await _context.Products.ToListAsync();
+        public ProductRepository(ProductDbContext context)
+        {
+            _context = context;
+        }
 
-        public async Task<Product?> GetByIdAsync(int id) =>
-            await _context.Products.FindAsync(id);
+        public async Task<IEnumerable<Product>> GetAllAsync()
+        {
+            return await _context.Products
+                .Include(p => p.Category)
+                .ToListAsync();
+        }
+
+        public async Task<Product?> GetByIdAsync(int id)
+        {
+            return await _context.Products
+                .Include(p => p.Category)
+                .FirstOrDefaultAsync(p => p.Id == id);
+        }
 
         public async Task<Product> AddAsync(Product product)
         {
@@ -31,10 +43,10 @@ namespace ProductManagement.Infrastructure.Repositories
 
         public async Task DeleteAsync(int id)
         {
-            var entity = await _context.Products.FindAsync(id);
-            if (entity != null)
+            var product = await _context.Products.FindAsync(id);
+            if (product != null)
             {
-                _context.Products.Remove(entity);
+                _context.Products.Remove(product);
                 await _context.SaveChangesAsync();
             }
         }
