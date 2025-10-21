@@ -1,6 +1,7 @@
 *.vsidx
 *.v2
 *.v2
-/ProductManagement.API/.vs/ProductManagement.API.slnx/DesignTimeBuild
-/ProductManagement.API/.vs/ProductManagement.API.slnx/v18
-/ProductManagement.API/bin
+ProductManagement.API/.vs/ProductManagement.API.slnx/DesignTimeBuild
+ProductManagement.API/.vs/ProductManagement.API.slnx/v18
+ProductManagement.API/bin
+ProductManagement.API/.vs
