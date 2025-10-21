@@ -179,6 +179,7 @@ F:\Repositorios\donet\ProductManagement.API\obj\Debug\net8.0\ProductManagement.A
 F:\Repositorios\donet\ProductManagement.API\obj\Debug\net8.0\ProductManagement.API.csproj.CoreCompileInputs.cache
 F:\Repositorios\donet\ProductManagement.API\obj\Debug\net8.0\ProductManagement.API.MvcApplicationPartsAssemblyInfo.cs
 F:\Repositorios\donet\ProductManagement.API\obj\Debug\net8.0\ProductManagement.API.MvcApplicationPartsAssemblyInfo.cache
+F:\Repositorios\donet\ProductManagement.API\obj\Debug\net8.0\ProductManagement.API.sourcelink.json
 F:\Repositorios\donet\ProductManagement.API\obj\Debug\net8.0\rjimswa.dswa.cache.json
 F:\Repositorios\donet\ProductManagement.API\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 F:\Repositorios\donet\ProductManagement.API\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json

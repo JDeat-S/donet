@@ -2,6 +2,35 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "AutoMapper/12.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/AutoMapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
+        "type": "package",
+        "dependencies": {
+          "AutoMapper": "[12.0.1]",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        }
+      },
       "Azure.Core/1.38.0": {
         "type": "package",
         "dependencies": {
@@ -47,10 +76,60 @@
           }
         }
       },
+      "FluentValidation/9.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "FluentValidation.AspNetCore/9.3.0": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation": "9.3.0",
+          "FluentValidation.DependencyInjectionExtensions": "9.3.0"
+        },
+        "compile": {
+          "lib/net5.0/FluentValidation.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/FluentValidation.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "FluentValidation.DependencyInjectionExtensions/9.3.0": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation": "9.3.0",
+          "Microsoft.Extensions.Dependencyinjection.Abstractions": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/Humanizer.dll": {
             "related": ".xml"
           }
         },
@@ -59,6 +138,44 @@
             "related": ".xml"
           }
         }
+      },
+      "Microsoft.AspNetCore.JsonPatch/3.1.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.NewtonsoftJson/3.1.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.JsonPatch": "3.1.5",
+          "Newtonsoft.Json": "12.0.2",
+          "Newtonsoft.Json.Bson": "1.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
         "type": "package",
@@ -407,7 +524,7 @@
           }
         }
       },
-      "Microsoft.CSharp/4.5.0": {
+      "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/_._": {}
@@ -986,6 +1103,211 @@
           "buildTransitive/Mono.TextTemplating.targets": {}
         }
       },
+      "Newtonsoft.Json/12.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Newtonsoft.Json.Bson/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "NodaTime/3.0.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.7.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/NodaTime.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NodaTime.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Rocket.Surgery.AspNetCore.FluentValidation/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation.AspNetCore": "9.3.0",
+          "Rocket.Surgery.Extensions.FluentValidation": "7.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Rocket.Surgery.AspNetCore.FluentValidation.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Rocket.Surgery.AspNetCore.FluentValidation.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Rocket.Surgery.AspNetCore.FluentValidation.NewtonsoftJson/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.5",
+          "Rocket.Surgery.AspNetCore.FluentValidation": "7.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Rocket.Surgery.AspNetCore.FluentValidation.NewtonsoftJson.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Rocket.Surgery.AspNetCore.FluentValidation.NewtonsoftJson.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Rocket.Surgery.Conventions.Abstractions/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
+          "Microsoft.Extensions.Logging": "5.0.0",
+          "Rocket.Surgery.Conventions.Attributes": "10.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Rocket.Surgery.Conventions.Abstractions.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Rocket.Surgery.Conventions.Abstractions.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Rocket.Surgery.Conventions.AspNetCore.FluentValidation/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation.AspNetCore": "9.3.0",
+          "Rocket.Surgery.AspNetCore.FluentValidation": "7.0.0",
+          "Rocket.Surgery.Conventions.FluentValidation": "7.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Rocket.Surgery.Conventions.AspNetCore.FluentValidation.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Rocket.Surgery.Conventions.AspNetCore.FluentValidation.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Rocket.Surgery.Conventions.AspNetCore.FluentValidation.NewtonsoftJson/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.5",
+          "Rocket.Surgery.AspNetCore.FluentValidation.NewtonsoftJson": "7.0.0",
+          "Rocket.Surgery.Conventions.AspNetCore.FluentValidation": "7.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Rocket.Surgery.Conventions.AspNetCore.FluentValidation.NewtonsoftJson.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Rocket.Surgery.Conventions.AspNetCore.FluentValidation.NewtonsoftJson.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Rocket.Surgery.Conventions.Attributes/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Rocket.Surgery.Conventions.Attributes.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Rocket.Surgery.Conventions.Attributes.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Rocket.Surgery.Conventions.Attributes.props": {},
+          "buildTransitive/Rocket.Surgery.Conventions.Attributes.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Rocket.Surgery.Conventions.Attributes.props": {},
+          "buildMultiTargeting/Rocket.Surgery.Conventions.Attributes.targets": {}
+        }
+      },
+      "Rocket.Surgery.Conventions.FluentValidation/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Rocket.Surgery.Conventions.Abstractions": "10.0.0",
+          "Rocket.Surgery.Extensions.FluentValidation": "7.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Rocket.Surgery.Conventions.FluentValidation.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Rocket.Surgery.Conventions.FluentValidation.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Rocket.Surgery.Extensions.FluentValidation/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation": "9.3.0",
+          "FluentValidation.DependencyInjectionExtensions": "9.3.0",
+          "Humanizer.Core": "2.8.26",
+          "NodaTime": "3.0.3"
+        },
+        "compile": {
+          "lib/net5.0/Rocket.Surgery.Extensions.FluentValidation.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Rocket.Surgery.Extensions.FluentValidation.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "System.ClientModel/1.0.0": {
         "type": "package",
         "dependencies": {
@@ -1353,7 +1675,7 @@
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
             "related": ".xml"
           }
         },
@@ -1601,10 +1923,64 @@
             "rid": "win"
           }
         }
+      },
+      "ProductManagement.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "ProductManagement.Domain": "1.0.0",
+          "Rocket.Surgery.Conventions.AspNetCore.FluentValidation.NewtonsoftJson": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ProductManagement.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProductManagement.Application.dll": {}
+        }
+      },
+      "ProductManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/ProductManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProductManagement.Domain.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "AutoMapper/12.0.1": {
+      "sha512": "hvV62vl6Hp/WfQ24yzo3Co9+OPl8wH8hApwVtgWpiAynVJkUcs7xvehnSftawL8Pe8FrPffBRM3hwzLQqWDNjA==",
+      "type": "package",
+      "path": "automapper/12.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "automapper.12.0.1.nupkg.sha512",
+        "automapper.nuspec",
+        "icon.png",
+        "lib/netstandard2.1/AutoMapper.dll",
+        "lib/netstandard2.1/AutoMapper.xml"
+      ]
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
+      "sha512": "+g/K+Vpe3gGMKGzjslMOdqNlkikScDjWfVvmWTayrDHaG/n2pPmFBMa+jKX1r/h6BDGFdkyRjAuhFE3ykW+r1g==",
+      "type": "package",
+      "path": "automapper.extensions.microsoft.dependencyinjection/12.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+        "automapper.extensions.microsoft.dependencyinjection.nuspec",
+        "icon.png",
+        "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
+      ]
+    },
     "Azure.Core/1.38.0": {
       "sha512": "IuEgCoVA0ef7E4pQtpC3+TkPbzaoQfa77HlfJDmfuaJUCVJmn7fT0izamZiryW5sYUFKizsftIxMkXKbgIcPMQ==",
       "type": "package",
@@ -1643,6 +2019,56 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
+    "FluentValidation/9.3.0": {
+      "sha512": "C44l6Ih+YwpED/TsXfl6LIq6Z4wLXahstnr6T70uUg1Hs7/bLBKKAo9Nl0sLhVjDE8TA+fF+O3IM4nDrwabcSQ==",
+      "type": "package",
+      "path": "fluentvalidation/9.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluent-validation-icon.png",
+        "fluentvalidation.9.3.0.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net461/FluentValidation.dll",
+        "lib/net461/FluentValidation.xml",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml"
+      ]
+    },
+    "FluentValidation.AspNetCore/9.3.0": {
+      "sha512": "0ZKHVvNIVgZEGgCe8z4NyVoPaCmM0kTRM0EySC23Enuc4jzBdhI+LtGhcvkF7lAulNlxR2S9IDnLibOM6RDaHg==",
+      "type": "package",
+      "path": "fluentvalidation.aspnetcore/9.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluent-validation-icon.png",
+        "fluentvalidation.aspnetcore.9.3.0.nupkg.sha512",
+        "fluentvalidation.aspnetcore.nuspec",
+        "lib/net5.0/FluentValidation.AspNetCore.dll",
+        "lib/net5.0/FluentValidation.AspNetCore.xml",
+        "lib/netcoreapp2.1/FluentValidation.AspNetCore.dll",
+        "lib/netcoreapp2.1/FluentValidation.AspNetCore.xml",
+        "lib/netcoreapp3.1/FluentValidation.AspNetCore.dll",
+        "lib/netcoreapp3.1/FluentValidation.AspNetCore.xml"
+      ]
+    },
+    "FluentValidation.DependencyInjectionExtensions/9.3.0": {
+      "sha512": "5PnAIlsApzWPp9rjxfu3xVWSj2qMDeFnEE3P4yx/oIQO1aLhPEEn4yW7JiydP9kpQKAtZ53qwNaOoQ1xSxajuA==",
+      "type": "package",
+      "path": "fluentvalidation.dependencyinjectionextensions/9.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluent-validation-icon.png",
+        "fluentvalidation.dependencyinjectionextensions.9.3.0.nupkg.sha512",
+        "fluentvalidation.dependencyinjectionextensions.nuspec",
+        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll",
+        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml"
+      ]
+    },
     "Humanizer.Core/2.14.1": {
       "sha512": "lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "type": "package",
@@ -1659,6 +2085,36 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Microsoft.AspNetCore.JsonPatch/3.1.5": {
+      "sha512": "vvQ9G+o8+uO6pA2iz4oYsKEtybor1XYQif4HrRQXH4Uco9NTt411rcHk4eepEIb8ZQ7z5X0JpHZZv1A6dCcvaA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.jsonpatch/3.1.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.xml",
+        "microsoft.aspnetcore.jsonpatch.3.1.5.nupkg.sha512",
+        "microsoft.aspnetcore.jsonpatch.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Mvc.NewtonsoftJson/3.1.5": {
+      "sha512": "dqZV405jbxRnUfekVsf+krvxbmNrF1JQh+XG66H6GQzYb8kIJKM/bZgK2+oDtXb4tgGHeesLG+M/sHbvtuQOrQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.mvc.newtonsoftjson/3.1.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Mvc.NewtonsoftJson.xml",
+        "microsoft.aspnetcore.mvc.newtonsoftjson.3.1.5.nupkg.sha512",
+        "microsoft.aspnetcore.mvc.newtonsoftjson.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
@@ -2643,10 +3099,10 @@
         "microsoft.codeanalysis.workspaces.msbuild.nuspec"
       ]
     },
-    "Microsoft.CSharp/4.5.0": {
-      "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+    "Microsoft.CSharp/4.7.0": {
+      "sha512": "pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
       "type": "package",
-      "path": "microsoft.csharp/4.5.0",
+      "path": "microsoft.csharp/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2659,6 +3115,7 @@
         "lib/netcoreapp2.0/_._",
         "lib/netstandard1.3/Microsoft.CSharp.dll",
         "lib/netstandard2.0/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.xml",
         "lib/portable-net45+win8+wp8+wpa81/_._",
         "lib/uap10.0.16299/_._",
         "lib/win8/_._",
@@ -2668,7 +3125,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "microsoft.csharp.4.5.0.nupkg.sha512",
+        "microsoft.csharp.4.7.0.nupkg.sha512",
         "microsoft.csharp.nuspec",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
@@ -3517,6 +3974,242 @@
         "mono.texttemplating.3.0.0.nupkg.sha512",
         "mono.texttemplating.nuspec",
         "readme.md"
+      ]
+    },
+    "Newtonsoft.Json/12.0.2": {
+      "sha512": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.2.nupkg.sha512",
+        "newtonsoft.json.nuspec"
+      ]
+    },
+    "Newtonsoft.Json.Bson/1.0.2": {
+      "sha512": "QYFyxhaABwmq3p/21VrZNYvCg3DaEoN/wUuw5nmfAf0X3HLjgupwhkEWdgfb9nvGAUIv3osmZoD3kKl4jxEmYQ==",
+      "type": "package",
+      "path": "newtonsoft.json.bson/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net45/Newtonsoft.Json.Bson.dll",
+        "lib/net45/Newtonsoft.Json.Bson.pdb",
+        "lib/net45/Newtonsoft.Json.Bson.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.Bson.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.Bson.pdb",
+        "lib/netstandard1.3/Newtonsoft.Json.Bson.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.Bson.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.Bson.pdb",
+        "lib/netstandard2.0/Newtonsoft.Json.Bson.xml",
+        "newtonsoft.json.bson.1.0.2.nupkg.sha512",
+        "newtonsoft.json.bson.nuspec"
+      ]
+    },
+    "NodaTime/3.0.3": {
+      "sha512": "sTXjtPsRddI6iaRL2iT80zBOiHTnSCy2rEHxobUKvRhr5nt7BbSIPb4cGtVf202OW0glaJMLr/5xg79FIFMHsA==",
+      "type": "package",
+      "path": "nodatime/3.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/NodaTime.dll",
+        "lib/netstandard2.0/NodaTime.pdb",
+        "lib/netstandard2.0/NodaTime.xml",
+        "nodatime.3.0.3.nupkg.sha512",
+        "nodatime.nuspec"
+      ]
+    },
+    "Rocket.Surgery.AspNetCore.FluentValidation/7.0.0": {
+      "sha512": "OFa1VW9toAgZ57mpS5DcgSd2AUaTg5oi7RVdxMuooY9uUsTgC995JIPbAcTAJ6HWVPbZ3v5pO/+O9oRKilzKHg==",
+      "type": "package",
+      "path": "rocket.surgery.aspnetcore.fluentvalidation/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "images/packageicon.png",
+        "lib/net5.0/Rocket.Surgery.AspNetCore.FluentValidation.dll",
+        "lib/net5.0/Rocket.Surgery.AspNetCore.FluentValidation.pdb",
+        "lib/net5.0/Rocket.Surgery.AspNetCore.FluentValidation.xml",
+        "lib/netcoreapp3.1/Rocket.Surgery.AspNetCore.FluentValidation.dll",
+        "lib/netcoreapp3.1/Rocket.Surgery.AspNetCore.FluentValidation.pdb",
+        "lib/netcoreapp3.1/Rocket.Surgery.AspNetCore.FluentValidation.xml",
+        "rocket.surgery.aspnetcore.fluentvalidation.7.0.0.nupkg.sha512",
+        "rocket.surgery.aspnetcore.fluentvalidation.nuspec"
+      ]
+    },
+    "Rocket.Surgery.AspNetCore.FluentValidation.NewtonsoftJson/7.0.0": {
+      "sha512": "lLxN3Mn0xmrP9QZB9U8mawE+RVIikv8fIpjsZLERORf0sOHkxAoZLZhHK3Q6HLFnV6yFpManXqNUOXZuP4iwnA==",
+      "type": "package",
+      "path": "rocket.surgery.aspnetcore.fluentvalidation.newtonsoftjson/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "images/packageicon.png",
+        "lib/net5.0/Rocket.Surgery.AspNetCore.FluentValidation.NewtonsoftJson.dll",
+        "lib/net5.0/Rocket.Surgery.AspNetCore.FluentValidation.NewtonsoftJson.pdb",
+        "lib/net5.0/Rocket.Surgery.AspNetCore.FluentValidation.NewtonsoftJson.xml",
+        "lib/netcoreapp3.1/Rocket.Surgery.AspNetCore.FluentValidation.NewtonsoftJson.dll",
+        "lib/netcoreapp3.1/Rocket.Surgery.AspNetCore.FluentValidation.NewtonsoftJson.pdb",
+        "lib/netcoreapp3.1/Rocket.Surgery.AspNetCore.FluentValidation.NewtonsoftJson.xml",
+        "rocket.surgery.aspnetcore.fluentvalidation.newtonsoftjson.7.0.0.nupkg.sha512",
+        "rocket.surgery.aspnetcore.fluentvalidation.newtonsoftjson.nuspec"
+      ]
+    },
+    "Rocket.Surgery.Conventions.Abstractions/10.0.0": {
+      "sha512": "lO5ExASer/x9kKYXzG6bp+Ti2yrL42jVEimTzKF/yJSLdCAq/MuNcIZw0g+s/gChbwCwKkXYYvBo2uVXzgQYRA==",
+      "type": "package",
+      "path": "rocket.surgery.conventions.abstractions/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "images/packageicon.png",
+        "lib/net5.0/Rocket.Surgery.Conventions.Abstractions.dll",
+        "lib/net5.0/Rocket.Surgery.Conventions.Abstractions.pdb",
+        "lib/net5.0/Rocket.Surgery.Conventions.Abstractions.xml",
+        "lib/netstandard2.0/Rocket.Surgery.Conventions.Abstractions.dll",
+        "lib/netstandard2.0/Rocket.Surgery.Conventions.Abstractions.pdb",
+        "lib/netstandard2.0/Rocket.Surgery.Conventions.Abstractions.xml",
+        "lib/netstandard2.1/Rocket.Surgery.Conventions.Abstractions.dll",
+        "lib/netstandard2.1/Rocket.Surgery.Conventions.Abstractions.pdb",
+        "lib/netstandard2.1/Rocket.Surgery.Conventions.Abstractions.xml",
+        "rocket.surgery.conventions.abstractions.10.0.0.nupkg.sha512",
+        "rocket.surgery.conventions.abstractions.nuspec"
+      ]
+    },
+    "Rocket.Surgery.Conventions.AspNetCore.FluentValidation/7.0.0": {
+      "sha512": "yTY/p11hO2GQCH9gmXLlYCyasStRhKwzoRT+u90mS6d+J0NhN6g24c0HFbwcbXd3eRZkgCnNGgTCMNGO6mrZKw==",
+      "type": "package",
+      "path": "rocket.surgery.conventions.aspnetcore.fluentvalidation/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "images/packageicon.png",
+        "lib/net5.0/Rocket.Surgery.Conventions.AspNetCore.FluentValidation.dll",
+        "lib/net5.0/Rocket.Surgery.Conventions.AspNetCore.FluentValidation.pdb",
+        "lib/net5.0/Rocket.Surgery.Conventions.AspNetCore.FluentValidation.xml",
+        "lib/netcoreapp3.1/Rocket.Surgery.Conventions.AspNetCore.FluentValidation.dll",
+        "lib/netcoreapp3.1/Rocket.Surgery.Conventions.AspNetCore.FluentValidation.pdb",
+        "lib/netcoreapp3.1/Rocket.Surgery.Conventions.AspNetCore.FluentValidation.xml",
+        "rocket.surgery.conventions.aspnetcore.fluentvalidation.7.0.0.nupkg.sha512",
+        "rocket.surgery.conventions.aspnetcore.fluentvalidation.nuspec"
+      ]
+    },
+    "Rocket.Surgery.Conventions.AspNetCore.FluentValidation.NewtonsoftJson/7.0.0": {
+      "sha512": "H4X4q6R7tkQA6bLPHHoDffEdAz0FxalVZJ1aFnIf0WJDaSA2piRz8S3zaZAiymUkT7SADq7OYV59uzehazvRgA==",
+      "type": "package",
+      "path": "rocket.surgery.conventions.aspnetcore.fluentvalidation.newtonsoftjson/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "images/packageicon.png",
+        "lib/net5.0/Rocket.Surgery.Conventions.AspNetCore.FluentValidation.NewtonsoftJson.dll",
+        "lib/net5.0/Rocket.Surgery.Conventions.AspNetCore.FluentValidation.NewtonsoftJson.pdb",
+        "lib/net5.0/Rocket.Surgery.Conventions.AspNetCore.FluentValidation.NewtonsoftJson.xml",
+        "lib/netcoreapp3.1/Rocket.Surgery.Conventions.AspNetCore.FluentValidation.NewtonsoftJson.dll",
+        "lib/netcoreapp3.1/Rocket.Surgery.Conventions.AspNetCore.FluentValidation.NewtonsoftJson.pdb",
+        "lib/netcoreapp3.1/Rocket.Surgery.Conventions.AspNetCore.FluentValidation.NewtonsoftJson.xml",
+        "rocket.surgery.conventions.aspnetcore.fluentvalidation.newtonsoftjson.7.0.0.nupkg.sha512",
+        "rocket.surgery.conventions.aspnetcore.fluentvalidation.newtonsoftjson.nuspec"
+      ]
+    },
+    "Rocket.Surgery.Conventions.Attributes/10.0.0": {
+      "sha512": "Lx1X76yq/wRiizhM0A0OnEtSlWm00ZknQYF3EUbdUqjeqZbr091/5y57wrmbTevhbdHKrSyoBte23Hp7zZdzyA==",
+      "type": "package",
+      "path": "rocket.surgery.conventions.attributes/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "analyzers/dotnet/cs/Rocket.Surgery.Conventions.Analyzers.dll",
+        "build/Rocket.Surgery.Conventions.Attributes.props",
+        "build/Rocket.Surgery.Conventions.Attributes.targets",
+        "buildMultiTargeting/Rocket.Surgery.Conventions.Attributes.props",
+        "buildMultiTargeting/Rocket.Surgery.Conventions.Attributes.targets",
+        "buildTransitive/Rocket.Surgery.Conventions.Attributes.props",
+        "buildTransitive/Rocket.Surgery.Conventions.Attributes.targets",
+        "images/packageicon.png",
+        "lib/net5.0/Rocket.Surgery.Conventions.Attributes.dll",
+        "lib/net5.0/Rocket.Surgery.Conventions.Attributes.pdb",
+        "lib/net5.0/Rocket.Surgery.Conventions.Attributes.xml",
+        "lib/netstandard2.0/Rocket.Surgery.Conventions.Attributes.dll",
+        "lib/netstandard2.0/Rocket.Surgery.Conventions.Attributes.pdb",
+        "lib/netstandard2.0/Rocket.Surgery.Conventions.Attributes.xml",
+        "lib/netstandard2.1/Rocket.Surgery.Conventions.Attributes.dll",
+        "lib/netstandard2.1/Rocket.Surgery.Conventions.Attributes.pdb",
+        "lib/netstandard2.1/Rocket.Surgery.Conventions.Attributes.xml",
+        "rocket.surgery.conventions.attributes.10.0.0.nupkg.sha512",
+        "rocket.surgery.conventions.attributes.nuspec"
+      ]
+    },
+    "Rocket.Surgery.Conventions.FluentValidation/7.0.0": {
+      "sha512": "Q4COi6112qJwqIE/Sb/K5QpvbVmWEgI9q3VJvEH8sOJjJtCPrViaeICgJJehUAMwZekqbZ8SHKyMiZCasFrKTw==",
+      "type": "package",
+      "path": "rocket.surgery.conventions.fluentvalidation/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "images/packageicon.png",
+        "lib/net5.0/Rocket.Surgery.Conventions.FluentValidation.dll",
+        "lib/net5.0/Rocket.Surgery.Conventions.FluentValidation.pdb",
+        "lib/net5.0/Rocket.Surgery.Conventions.FluentValidation.xml",
+        "lib/netstandard2.0/Rocket.Surgery.Conventions.FluentValidation.dll",
+        "lib/netstandard2.0/Rocket.Surgery.Conventions.FluentValidation.pdb",
+        "lib/netstandard2.0/Rocket.Surgery.Conventions.FluentValidation.xml",
+        "lib/netstandard2.1/Rocket.Surgery.Conventions.FluentValidation.dll",
+        "lib/netstandard2.1/Rocket.Surgery.Conventions.FluentValidation.pdb",
+        "lib/netstandard2.1/Rocket.Surgery.Conventions.FluentValidation.xml",
+        "rocket.surgery.conventions.fluentvalidation.7.0.0.nupkg.sha512",
+        "rocket.surgery.conventions.fluentvalidation.nuspec"
+      ]
+    },
+    "Rocket.Surgery.Extensions.FluentValidation/7.0.0": {
+      "sha512": "c845YY1O5aB9INEsdIrSnmYsFdEonr1VTmIhovbdYvGt2Oe//dESZ4D2367eUp9rfyaa70JFKqBwqdLJZv+jCw==",
+      "type": "package",
+      "path": "rocket.surgery.extensions.fluentvalidation/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "images/packageicon.png",
+        "lib/net5.0/Rocket.Surgery.Extensions.FluentValidation.dll",
+        "lib/net5.0/Rocket.Surgery.Extensions.FluentValidation.pdb",
+        "lib/net5.0/Rocket.Surgery.Extensions.FluentValidation.xml",
+        "lib/netstandard2.0/Rocket.Surgery.Extensions.FluentValidation.dll",
+        "lib/netstandard2.0/Rocket.Surgery.Extensions.FluentValidation.pdb",
+        "lib/netstandard2.0/Rocket.Surgery.Extensions.FluentValidation.xml",
+        "lib/netstandard2.1/Rocket.Surgery.Extensions.FluentValidation.dll",
+        "lib/netstandard2.1/Rocket.Surgery.Extensions.FluentValidation.pdb",
+        "lib/netstandard2.1/Rocket.Surgery.Extensions.FluentValidation.xml",
+        "rocket.surgery.extensions.fluentvalidation.7.0.0.nupkg.sha512",
+        "rocket.surgery.extensions.fluentvalidation.nuspec"
       ]
     },
     "System.ClientModel/1.0.0": {
@@ -4712,13 +5405,25 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "ProductManagement.Application/1.0.0": {
+      "type": "project",
+      "path": "../ProductManagement.Application/ProductManagement.Application.csproj",
+      "msbuildProject": "../ProductManagement.Application/ProductManagement.Application.csproj"
+    },
+    "ProductManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ProductManagement.Domain/ProductManagement.Domain.csproj",
+      "msbuildProject": "../ProductManagement.Domain/ProductManagement.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.EntityFrameworkCore >= 9.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.10",
-      "Microsoft.EntityFrameworkCore.Tools >= 9.0.10"
+      "Microsoft.EntityFrameworkCore.Tools >= 9.0.10",
+      "ProductManagement.Application >= 1.0.0",
+      "ProductManagement.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4753,7 +5458,14 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\Repositorios\\donet\\ProductManagement.Application\\ProductManagement.Application.csproj": {
+              "projectPath": "F:\\Repositorios\\donet\\ProductManagement.Application\\ProductManagement.Application.csproj"
+            },
+            "F:\\Repositorios\\donet\\ProductManagement.Domain\\ProductManagement.Domain.csproj": {
+              "projectPath": "F:\\Repositorios\\donet\\ProductManagement.Domain\\ProductManagement.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -11,4 +11,14 @@
     <PackageReference Include="Rocket.Surgery.Conventions.AspNetCore.FluentValidation.NewtonsoftJson" Version="7.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Mappings\" />
+    <Folder Include="Validators\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProductManagement.Domain\ProductManagement.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

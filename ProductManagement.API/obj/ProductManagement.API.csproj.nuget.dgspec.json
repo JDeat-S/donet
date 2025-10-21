@@ -127,7 +127,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "F:\\Repositorios\\donet\\ProductManagement.Domain\\ProductManagement.Domain.csproj": {
+                "projectPath": "F:\\Repositorios\\donet\\ProductManagement.Domain\\ProductManagement.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -269,7 +273,14 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "F:\\Repositorios\\donet\\ProductManagement.Application\\ProductManagement.Application.csproj": {
+                "projectPath": "F:\\Repositorios\\donet\\ProductManagement.Application\\ProductManagement.Application.csproj"
+              },
+              "F:\\Repositorios\\donet\\ProductManagement.Domain\\ProductManagement.Domain.csproj": {
+                "projectPath": "F:\\Repositorios\\donet\\ProductManagement.Domain\\ProductManagement.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
