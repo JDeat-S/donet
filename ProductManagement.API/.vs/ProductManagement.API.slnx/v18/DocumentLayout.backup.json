@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\Repositorios\\donet\\ProductManagement.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{076E099C-680A-4A86-9C98-BCDC5C6388CC}|ProductManagement.API.csproj|f:\\repositorios\\donet\\productmanagement.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{076E099C-680A-4A86-9C98-BCDC5C6388CC}|ProductManagement.API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB24653A-E9DE-41F7-8D6C-AF5C1F3C17D8}|..\\ProductManagement.Infrastructure\\ProductManagement.Infrastructure.csproj|f:\\repositorios\\donet\\productmanagement.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B8724DA-5352-47D6-BB9D-44986D532F00}|..\\ProductManagement.Application\\ProductManagement.Application.csproj|f:\\repositorios\\donet\\productmanagement.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAF6B33A-157B-4D51-9206-B3A2316F0082}|..\\ProductManagement.Domain\\ProductManagement.Domain.csproj|f:\\repositorios\\donet\\productmanagement.domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "F:\\Repositorios\\donet\\ProductManagement.API\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "F:\\Repositorios\\donet\\ProductManagement.API\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-21T17:46:46.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "F:\\Repositorios\\donet\\ProductManagement.Infrastructure\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\ProductManagement.Infrastructure\\Class1.cs",
+              "ToolTip": "F:\\Repositorios\\donet\\ProductManagement.Infrastructure\\Class1.cs",
+              "RelativeToolTip": "..\\ProductManagement.Infrastructure\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T17:29:08.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "F:\\Repositorios\\donet\\ProductManagement.Application\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\ProductManagement.Application\\Class1.cs",
+              "ToolTip": "F:\\Repositorios\\donet\\ProductManagement.Application\\Class1.cs",
+              "RelativeToolTip": "..\\ProductManagement.Application\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T17:28:53.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "F:\\Repositorios\\donet\\ProductManagement.Domain\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\ProductManagement.Domain\\Class1.cs",
+              "ToolTip": "F:\\Repositorios\\donet\\ProductManagement.Domain\\Class1.cs",
+              "RelativeToolTip": "..\\ProductManagement.Domain\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T17:28:10.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
